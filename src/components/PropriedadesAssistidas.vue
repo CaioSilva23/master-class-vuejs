@@ -11,18 +11,22 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, watchEffect } from 'vue';
 
 const anoNascimento = ref(1990);
 const anoAtual = ref(2000);
 const idade = ref(0);
 
-watch(anoAtual, (anoAtual)=> {
-    idade.value = anoAtual - anoNascimento.value;
-})
+// watch(anoAtual, (anoAtual)=> {
+//     idade.value = anoAtual - anoNascimento.value;
+// })
 
-watch(anoNascimento, (anoNascimento)=> {
-    idade.value = anoAtual.value - anoNascimento;
+// watch(anoNascimento, (anoNascimento)=> {
+//     idade.value = anoAtual.value - anoNascimento;
+// })
+
+watchEffect(() => {
+    idade.value = anoAtual.value - anoNascimento.value;
 })
 </script>
 
