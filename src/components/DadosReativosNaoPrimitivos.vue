@@ -6,7 +6,7 @@
         <button @click="mudarNome">Mudar Nome</button>
     </div>
 </template>
-<script setup>
+<!-- <script setup>
 import { reactive } from 'vue';
 const pessoa = reactive({
     nome: 'Fulano',
@@ -17,6 +17,27 @@ const fazerAniversario = () => {
 }
 const mudarNome = () => {
     pessoa.nome = 'João';
+}
+</script> -->
+
+<script>
+export default {
+    data: () => {
+        return {
+            pessoa: {
+                nome: 'Fulano',
+                idade: 30
+            }
+        }
+    },
+    methods: {
+        fazerAniversario() {
+            this.pessoa.idade++;
+        },
+        mudarNome() {
+            this.pessoa.nome = 'João';
+        }
+    }
 }
 </script>
 
