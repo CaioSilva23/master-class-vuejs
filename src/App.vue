@@ -7,6 +7,7 @@ import DataBinding from './components/DataBinding.vue';
 import ComProps from './components/ComProps.vue';
 import EscutaEvento from './components/EscutaEvento.vue';
 import PropriedadesComputadas from './components/PropriedadesComputadas.vue';
+import PropriedadesAssistidas from './components/PropriedadesAssistidas.vue';
 
 const produto = "Camiseta";
 const preco = 49.99;
@@ -14,6 +15,7 @@ const preco = 49.99;
 
 <template>
   <header>Vue</header>
+  <PropriedadesAssistidas/>
   <PropriedadesComputadas/>
   <EscutaEvento/>
   <ComProps :item="produto" :preco="preco"/>
