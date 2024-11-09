@@ -9,13 +9,16 @@ import EscutaEvento from './components/EscutaEvento.vue';
 import PropriedadesComputadas from './components/PropriedadesComputadas.vue';
 import PropriedadesAssistidas from './components/PropriedadesAssistidas.vue';
 import RenderizacaoCondicional from './components/RenderizacaoCondicional.vue';
+import RenderizacaoCondicional2 from './components/RenderizacaoCondicional2.vue';
 
 const produto = "Camiseta";
 const preco = 49.99;
+
 </script>
 
 <template>
   <header>Vue</header>
+  <RenderizacaoCondicional2 nome="Francisca" :qtdCachorro="10"/>
   <RenderizacaoCondicional/>
   <PropriedadesAssistidas/>
   <PropriedadesComputadas/>
