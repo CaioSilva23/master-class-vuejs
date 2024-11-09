@@ -5,7 +5,27 @@
         <button @click="adicionar">Adicionar ao carrinho</button>
     </div>
 </template>
-<script setup>
+<script>
+export default {
+  props: {
+    item: {
+      type: String,
+      required: true
+    },
+    preco: {
+      type: Number,
+      required: true
+    }
+  },
+  emits: ['adicionar'],
+  methods: {
+    adicionar() {
+      this.$emit('adicionar', this.preco);
+    }
+  }
+}
+</script>
+<!-- <script setup>
 import { defineProps, defineEmits } from 'vue';
 
 const {item, preco} = defineProps({
@@ -18,7 +38,7 @@ const emit = defineEmits(['adicionar']);
 const adicionar = () => {
     emit('adicionar', preco);
 }
-</script>
+</script> -->
 <style lang="">
     
 </style>

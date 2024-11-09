@@ -22,7 +22,29 @@
     </div>
 </template>
 
-<script setup>
+
+<script>
+import EmiteEvento from './EmiteEvento.vue';
+
+export default {
+    components: {
+        EmiteEvento
+    },
+    data() {
+        return {
+            total: 0
+        }
+    },
+    methods: {
+        atualizarTotal(p) {
+            const valor = this.total + p;
+            this.total = +valor.toFixed(2);
+        }
+    }
+}
+</script>
+
+<!-- <script setup>
 import { ref } from 'vue';
 import EmiteEvento from './EmiteEvento.vue';
 
@@ -33,7 +55,7 @@ const atualizarTotal = (p) => {
     total.value = +valor.toFixed(2);
 }
 
-</script>
+</script> -->
 
 <style>
 .lista{

@@ -6,12 +6,15 @@ import ComDadosReativosNaoPrimitivos from './components/DadosReativosNaoPrimitiv
 import DataBinding from './components/DataBinding.vue';
 import ComProps from './components/ComProps.vue';
 import EscutaEvento from './components/EscutaEvento.vue';
+import PropriedadesComputadas from './components/PropriedadesComputadas.vue';
+
 const produto = "Camiseta";
 const preco = 49.99;
 </script>
 
 <template>
   <header>Vue</header>
+  <PropriedadesComputadas/>
   <EscutaEvento/>
   <ComProps :item="produto" :preco="preco"/>
   <DataBinding/>
