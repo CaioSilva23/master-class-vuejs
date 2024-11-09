@@ -10,14 +10,19 @@ import PropriedadesComputadas from './components/PropriedadesComputadas.vue';
 import PropriedadesAssistidas from './components/PropriedadesAssistidas.vue';
 import RenderizacaoCondicional from './components/RenderizacaoCondicional.vue';
 import RenderizacaoCondicional2 from './components/RenderizacaoCondicional2.vue';
+import RenderizacaoListas from './components/RenderizacaoListas.vue';
 
 const produto = "Camiseta";
 const preco = 49.99;
-
+const arrayCachorros = [
+  {nome: 'Rex', idade: 10}, 
+  {nome: 'Tobias', idade: 5}
+]
 </script>
 
 <template>
   <header>Vue</header>
+  <RenderizacaoListas nome="Francisca" :arrayCachorros="arrayCachorros"/>
   <RenderizacaoCondicional2 nome="Francisca" :qtdCachorro="10"/>
   <RenderizacaoCondicional/>
   <PropriedadesAssistidas/>
@@ -32,4 +37,5 @@ const preco = 49.99;
 </template>
 
 <style scoped>
+
 </style>
