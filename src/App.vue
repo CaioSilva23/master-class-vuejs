@@ -4,10 +4,15 @@ import ComDados from './components/ComDados.vue';
 import ComDadosReativosPrimitivos from './components/DadosReativosPrimitivos.vue';
 import ComDadosReativosNaoPrimitivos from './components/DadosReativosNaoPrimitivos.vue';
 import DataBinding from './components/DataBinding.vue';
+import ComProps from './components/ComProps.vue';
+
+const produto = "Camiseta";
+const preco = 49.99;
 </script>
 
 <template>
   <header>Vue</header>
+  <ComProps :item="produto" :preco="preco"/>
   <DataBinding/>
   <ComDadosReativosNaoPrimitivos/>
   <ComDadosReativosPrimitivos/>
