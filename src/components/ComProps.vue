@@ -12,16 +12,6 @@ defineProps({
     preco: Number
 });
 </script>
-<!-- <script>
-export default {
-    data() {
-        return {
-            item: 'Camiseta',
-            preco: 49.99
-        }
-    }
-} -->
-<!-- </script> -->
 <style lang="">
     
 </style>
