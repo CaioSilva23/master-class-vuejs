@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='componente'>
         <h1>Componente com dados</h1>
         <p>Nome: {{nome}} - {{ codigo }}</p>
     </div>
@@ -34,15 +34,4 @@ const codigo = "#123456";
 </script>
 
 <style scoped>
-    div{
-        border: 2px solid rgb(10, 69, 4);
-        background-color: #050d04;
-        padding: 10px;
-        margin: 30px;
-        border-radius: 15px;
-        text-align: center;
-    }
-    p {
-        font-size: 1.5rem;
-    }
 </style>
